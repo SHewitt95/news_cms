@@ -13,6 +13,7 @@
           <th>ID</th>
           <th>Headline</th>
           <th>Author</th>
+          <th>Text</th>
         </tr>
       </thead>
       <tbody>
@@ -21,6 +22,7 @@
             <td>{{ $post->id}}</td>
             <td>{{ $post->headline }}</td>
             <td>{{ $post->author_id}}</td>
+            <td>{{ $post->body_text}}</td>
           </tr>
         @endforeach
       </tbody>

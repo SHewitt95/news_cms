@@ -15,7 +15,7 @@ class Post extends Migration
       Schema::create('post', function (Blueprint $table) {
         $table->increments('id');
         $table->string('headline', 255);
-        $table->integer('author_id');
+        $table->integer('author_id')->default(0);
         $table->timestamps();
         $table->integer('package_id')->nullable();
         $table->string(‘body_text’);
