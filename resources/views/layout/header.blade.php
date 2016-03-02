@@ -49,6 +49,10 @@
       display: block;
       margin-bottom: 2em;
     }
+
+    a button {
+      margin: 0;
+    }
     </style>
 </head>
 @stop
