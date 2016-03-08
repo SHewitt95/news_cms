@@ -5,8 +5,9 @@
 
 @section('content')
   <div class="title">Departments</div>
-  <div class="content">
 
+  <div class="content">
+    <a href="/admin/new_dept"><button>Add New</button></a>
       <table>
         <thead>
           <tr>

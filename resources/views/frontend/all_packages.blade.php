@@ -6,6 +6,7 @@
 @section('content')
   <div class="title">Packages</div>
   <div class="content">
+    <a href="/admin/new_package"><button>Add New</button></a>
 
       <table>
         <thead>

@@ -15,7 +15,7 @@ class Author extends Migration
       Schema::create('author', function (Blueprint $table) {
         $table->increments('id');
         $table->string('name', 255);
-        $table->integer('dept_id');
+        $table->integer('dept_id')->nullable();
         $table->timestamps();
       });
     }

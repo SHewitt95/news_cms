@@ -12,8 +12,9 @@
     {!! Form::text('headline', 'Headline here') !!}
 
     {!! Form::label('author', 'Author:') !!}
+    <!--
     {!!Form::select('author', $authors, null, ['placeholder' => 'Pick an author...']) !!}
-
+  -->
     <select>
       @foreach ($authors as $author)
         <option value="{{$author->id}}">{{ $author->name }}</option>

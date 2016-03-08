@@ -21,19 +21,31 @@ Route::get('/welcome', 'MyController@index2')->name('saywelcome');
 
 Route::get('/admin', 'MyController@admin')->name('adminPage');
 
-Route::get('/admin/authors', 'MyController@view_all_authors')->name('allAuthors');
+Route::get('/admin/authors', 'AuthorController@view_all_authors')->name('allAuthors');
 
-Route::get('/admin/departments', 'MyController@view_all_departments')->name('allDepartments');
+Route::get('/admin/departments', 'DeptController@view_all_departments')->name('allDepartments');
 
-Route::get('/admin/packages', 'MyController@view_all_packages')->name('allPackages');
+Route::get('/admin/packages', 'PackageController@view_all_packages')->name('allPackages');
 
-Route::get('/admin/photos', 'MyController@view_all_photos')->name('allPhotos');
+Route::get('/admin/photos', 'PhotoController@view_all_photos')->name('allPhotos');
 
-Route::get('/admin/posts', 'MyController@view_all_posts')->name('allPosts');
+Route::get('/admin/posts', 'PostController@view_all_posts')->name('allPosts');
 
-Route::get('/admin/new_post', 'MyController@new_post')->name('newPost');
+Route::get('/admin/new_post', 'PostController@new_post')->name('newPost');
 
-Route::post('/admin/new_post', 'MyController@make_new_post')->name('makeNewPost');
+Route::post('/admin/new_post', 'PostController@make_new_post')->name('makeNewPost');
+
+Route::get('/admin/new_author', 'AuthorController@new_author')->name('newAuthor');
+
+Route::post('/admin/new_author', 'AuthorController@make_new_author')->name('makeNewAuthor');
+
+Route::get('/admin/new_dept', 'DeptController@new_dept')->name('newDept');
+
+Route::post('/admin/new_dept', 'DeptController@make_new_dept')->name('makeNewDept');
+
+Route::get('/admin/new_package', 'PackageController@new_package')->name('newPackage');
+
+Route::post('/admin/new_package', 'PackageController@make_new_package')->name('makeNewPackage');
 
 
 /*

@@ -6,6 +6,7 @@
 @section('content')
 <div class="title">Authors</div>
  <div class="content">
+   <!--a href="/admin/new_author"><button>Add New</button></a-->
 
      <!--div class="">{!! $authors[0]->name !!}</div-->
      <table>
