@@ -15,11 +15,13 @@
     return view('welcome');
 });*/
 
+Route::resource('admin/posts', 'NewPostController');
+
 Route::get('/', 'MyController@index')->name('sayhello');
 
-Route::get('/welcome', 'MyController@index2')->name('saywelcome');
-
 Route::get('/admin', 'MyController@admin')->name('adminPage');
+
+/*
 
 Route::get('/admin/authors', 'AuthorController@view_all_authors')->name('allAuthors');
 
@@ -47,7 +49,15 @@ Route::get('/admin/new_package', 'PackageController@new_package')->name('newPack
 
 Route::post('/admin/new_package', 'PackageController@make_new_package')->name('makeNewPackage');
 
+Route::get('/admin/edit_post/{id}', 'PostController@edit_post')->name('editPost');
 
+Route::post('/admin/edit_post/{id}', 'PostController@save_post')->name('savePost');
+
+Route::get('/admin/edit_dept/{id}', 'DeptController@edit_dept')->name('editDept');
+
+Route::get('/admin/edit_package/{id}', 'PackageController@edit_package')->name('editPackage');
+
+*/
 /*
 |--------------------------------------------------------------------------
 | Application Routes

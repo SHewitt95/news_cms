@@ -18,8 +18,8 @@
         <tbody>
           @foreach ($departments as $dept)
             <tr>
-              <td>{{ $dept->id}}</td>
-              <td>{{ $dept->name}}</td>
+              <td><a href="{{ URL::to('admin/edit_dept/' . $dept->id) }}">{{ $dept->id}}</a></td>
+              <td><a href="{{ URL::to('admin/edit_dept/' . $dept->id) }}">{{ $dept->name}}</a></td>
             </tr>
           @endforeach
         </tbody>

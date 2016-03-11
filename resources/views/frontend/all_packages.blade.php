@@ -18,8 +18,8 @@
         <tbody>
           @foreach ($packages as $package)
             <tr>
-              <td>{{ $package->id}}</td>
-              <td>{{ $package->topic}}</td>
+              <td><a href="{{ URL::to('admin/edit_package/' . $package->id) }}">{{ $package->id}}</a></td>
+              <td><a href="{{ URL::to('admin/edit_package/' . $package->id) }}">{{ $package->topic}}</a></td>
             </tr>
           @endforeach
         </tbody>

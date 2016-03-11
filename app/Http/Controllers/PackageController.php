@@ -38,4 +38,9 @@ class PackageController extends Controller
     return view('frontend.new_package');
   }
 
+  public function edit_package($id) {
+    $package = Package::find($id);
+    return view('frontend.edit_package', ["package" => $package]);
+  }
+
 }

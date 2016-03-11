@@ -31,4 +31,9 @@ class DeptController extends Controller
     return view('frontend.new_dept');
   }
 
+  public function edit_dept($id) {
+    $dept = Department::find($id);
+    return view('frontend.edit_dept', ["dept" => $dept]);
+  }
+
 }

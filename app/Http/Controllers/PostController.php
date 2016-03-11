@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -35,6 +36,20 @@ class PostController extends Controller
     $post->save();
     $posts = Post::all();
     return view('frontend.all_posts', ["posts" => $posts]);
+  }
+
+  public function save_post(Request $request, $id) {
+    $post = Post::find($id);
+    $post->headline = $request->headline;
+    $post->body_text = $request->body_text;
+    $post->save();
+    return view('frontend.edit_post', ["post" => $post]);
+  }
+
+  public function edit_post($id) {
+    $post = Post::find($id);
+    //$author = Post::find($id)->author_id;
+    return view('frontend.edit_post', ["post" => $post]);
   }
 
 }

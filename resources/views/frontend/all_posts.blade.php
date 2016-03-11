@@ -19,10 +19,10 @@
       <tbody>
         @foreach ($posts as $post)
           <tr>
-            <td>{{ $post->id}}</td>
-            <td>{{ $post->headline }}</td>
-            <td>{{ $post->author_id}}</td>
-            <td>{{ $post->body_text}}</td>
+            <td><a href="{{ URL::to('admin/edit_post/' . $post->id) }}">{{ $post->id}}</a></td>
+            <td><a href="{{ URL::to('admin/edit_post/' . $post->id) }}">{{ $post->headline }}</a></td>
+            <td><a href="{{ URL::to('admin/edit_post/' . $post->id) }}">{{ $post->author_id}}</a></td>
+            <td><a href="{{ URL::to('admin/edit_post/' . $post->id) }}">{{ $post->body_text}}</a></td>
           </tr>
         @endforeach
       </tbody>

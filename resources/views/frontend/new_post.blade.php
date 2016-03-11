@@ -7,7 +7,7 @@
   <div class="title">New Post</div>
   <div class="content">
 
-    {!! Form::open(array('url' => '/admin/new_post')) !!}
+    {!! Form::open(array('url' => '/admin/posts')) !!}
 
     {!! Form::text('headline', 'Headline here') !!}
 

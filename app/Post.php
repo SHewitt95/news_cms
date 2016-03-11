@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     public function authors() {
-      return $this->hasMany('App\Author');
+      return $this->hasOne('App\Author');
     }
 
     public function photos() {
