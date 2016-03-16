@@ -15,7 +15,7 @@
          <li><a href="/admin/posts">Posts</a></li>
          <li><a href="/admin/authors">Authors</a></li>
          <li><a href="/admin/departments">Departments</a></li>
-         <li><a href="/admin/photos">Photos</a></li>
+         <!--li><a href="/admin/photos">Photos</a></li-->
          <li><a href="/admin/packages">Packages</a></li>
        </ul>
      </div><!--/.nav-collapse -->

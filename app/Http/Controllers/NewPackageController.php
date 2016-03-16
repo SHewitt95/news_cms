@@ -33,8 +33,9 @@ class NewPackageController extends Controller
     */
    public function create()
    {
-     $depts = Department::lists('name', 'id');
-     return view('frontend.authors.create', ["depts" => $depts]);
+     $posts = Post::lists('headline', 'id');
+     $authors = Author::lists('name', 'id');
+     return view('frontend.packages.create', ["posts" => $posts, "authors" => $authors]);
    }
 
    /**
@@ -45,13 +46,14 @@ class NewPackageController extends Controller
    public function store(Request $request)
    {
      // store
-     $author = new Author;
-     $author->name = $request->name;
-     $author->department = $request->department;
-     $author->save();
+     $package = new Package;
+     $package->topic = $request->topic;
+     $package->post_id = $request->post_id;
+     $package->author_id = $request->author_id;
+     $package->save();
 
-     $authors = Author::all();
-     return view('frontend.authors.index', ["authors" => $authors]);
+     $packages = Package::all();
+     return view('frontend.packages.index', ["packages" => $packages]);
    }
 
    /**
@@ -73,10 +75,11 @@ class NewPackageController extends Controller
     */
    public function edit($id)
    {
-       $author = Author::find($id);
-       $depts = Department::lists('name', 'id');
+       $package = Package::find($id);
+       $authors = Author::lists('name', 'id');
+       $posts = Post::lists('headline', 'id');
 
-       return view('frontend.authors.edit', ["author" => $author, "depts" => $depts]);
+       return view('frontend.packages.edit', ["authors" => $authors, "posts" => $posts, "package" => $package]);
    }
 
    /**
@@ -87,13 +90,14 @@ class NewPackageController extends Controller
     */
    public function update($id, Request $request)
    {
-     $author = Author::find($id);
-     $author->name = $request->name;
-     $author->department = $request->department;
-     $author->save();
+     $package = Package::find($id);
+     $package->topic = $request->topic;
+     $package->post_id = $request->post_id;
+     $package->author_id = $request->author_id;
+     $package->save();
 
-      $authors = Author::all();
-      return view('frontend.authors.index', ["authors" => $authors]);
+      $packages = Package::all();
+      return view('frontend.packages.index', ["packages" => $packages]);
    }
 
    /**
@@ -105,11 +109,11 @@ class NewPackageController extends Controller
    public function destroy($id)
    {
      // delete
-      $author = Author::find($id);
-      $author->delete();
+      $package = Package::find($id);
+      $package->delete();
 
       // redirect
-      $authors = Author::all();
-      return view('frontend.authors.index', ["authors" => $authors]);
+      $packages = Package::all();
+      return view('frontend.packages.index', ["packages" => $packages]);
    }
 }
