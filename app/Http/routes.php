@@ -17,6 +17,16 @@
 
 Route::get('/', 'MyController@index')->name('sayhello');
 
+Route::get('/admin', 'MyController@admin')->name('adminPage');
+
+Route::resource('admin/posts', 'NewPostController');
+
+Route::resource('admin/authors', 'NewAuthorController');
+
+Route::resource('admin/departments', 'NewDeptController');
+
+Route::resource('admin/packages', 'NewPackageController');
+
 
 
 /*
@@ -69,16 +79,7 @@ Route::get('/admin/edit_package/{id}', 'PackageController@edit_package')->name('
 
 Route::group(['middleware' => ['web']], function () {
 
-  Route::get('/admin', 'MyController@admin')->name('adminPage');
 
-  Route::resource('admin/posts', 'NewPostController');
-
-  Route::resource('admin/authors', 'NewAuthorController');
-
-  Route::resource('admin/departments', 'NewDeptController');
-
-  Route::resource('admin/packages', 'NewPackageController');
-  
 });
 
 Route::group(['middleware' => 'web'], function () {
