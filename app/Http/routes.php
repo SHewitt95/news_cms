@@ -19,6 +19,8 @@ Route::get('/', 'MyController@index')->name('sayhello');
 
 Route::get('/admin', 'MyController@admin')->name('adminPage');
 
+Route::get('json', 'NewPostController@posts_json')->name('pjson');
+
 Route::resource('admin/posts', 'NewPostController');
 
 Route::resource('admin/authors', 'NewAuthorController');

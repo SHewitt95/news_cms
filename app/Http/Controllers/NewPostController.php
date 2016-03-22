@@ -15,6 +15,13 @@ use App\Photo;
 
 class NewPostController extends Controller
 {
+
+    public function posts_json() {
+        $posts = Post::all();
+        return response()->json($posts);
+    }
+
+
     /**
     * Display a listing of the resource.
     *
@@ -36,7 +43,7 @@ class NewPostController extends Controller
    {
      $authors = Author::lists('name', 'id');
      $packages = Package::lists('topic', 'id');
-     
+
      return view('frontend.posts.create', ["authors" => $authors, "packages" => $packages]);
    }
 
