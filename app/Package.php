@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Package extends Model
 {
+
+  protected $table = 'package';
   public function posts() {
     return $this->hasMany('App\Post');
   }

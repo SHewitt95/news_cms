@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+
+  protected $table = 'post';
     public function authors() {
       return $this->hasOne('App\Author');
     }
