@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Author extends Model
 {
 
-  protected $table = 'authors';
+  protected $table = 'author';
 
   public function department() {
     return $this->hasOne('App\Department');
