@@ -18,7 +18,7 @@ class Post extends Migration
         $table->integer('author_id')->default(0);
         $table->timestamps();
         $table->integer('package_id')->nullable();
-        $table->string(‘body_text’);
+        $table->string('body_text');
       });
     }
 
