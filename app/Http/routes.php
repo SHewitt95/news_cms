@@ -29,6 +29,8 @@ Route::resource('admin/departments', 'NewDeptController');
 
 Route::resource('admin/packages', 'NewPackageController');
 
+Route::resource('admin/photos', 'NewPhotoController');
+
 
 
 /*
