@@ -45,6 +45,11 @@
       padding: 1em 5em;
     }
 
+    table tbody tr td img {
+      width: 20%;
+      height: 20%;
+    }
+
     input, textarea, button, select {
       display: block;
       margin-bottom: 2em;
