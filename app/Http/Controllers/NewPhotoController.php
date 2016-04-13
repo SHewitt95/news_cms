@@ -64,7 +64,7 @@ class NewPhotoController extends Controller
 
         //  dd($imageName);
 
-        $imgPath = base_path() . '/storage/app/public/'. $imageName;
+        $imgPath = '/images/'. $imageName;
 
         $photo->img_link = $imgPath;
 
@@ -73,7 +73,7 @@ class NewPhotoController extends Controller
         //dd($imgPath);
 
         $request->file('image')->move(
-          base_path() . '/storage/app/public/', $imageName
+          base_path() . '/public/images/', $imageName
         );
 
 
