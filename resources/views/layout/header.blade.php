@@ -46,8 +46,8 @@
     }
 
     table tbody tr td img {
-      width: 33%;
-      height: 150px;
+      width: 50%;
+      height: 50%;
     }
 
     input, textarea, button, select {
