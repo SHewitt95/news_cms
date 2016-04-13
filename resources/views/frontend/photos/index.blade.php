@@ -24,10 +24,10 @@
       <tbody>
         @foreach ($photos as $photo)
           <tr>
-            <td><a href="{{ URL::to('admin/photos/' . $post->id . '/edit/') }}">{{ $photo->id}}</a></td>
-            <td><a href="{{ URL::to('admin/photos/' . $post->id . '/edit/') }}">{{ $photo->caption }}</a></td>
-            <td><a href="{{ URL::to('admin/photos/' . $post->id . '/edit/') }}">{{ $photo->author_id}}</a></td>
-            <td><a href="{{ URL::to('admin/photos/' . $post->id . '/edit/') }}">{{ $photo->img_link}}</a></td>
+            <td><a href="{{ URL::to('admin/photos/' . $photo->id . '/edit/') }}">{{ $photo->id}}</a></td>
+            <td><a href="{{ URL::to('admin/photos/' . $photo->id . '/edit/') }}">{{ $photo->caption }}</a></td>
+            <td><a href="{{ URL::to('admin/photos/' . $photo->id . '/edit/') }}">{{ $photo->author_id}}</a></td>
+            <td><a href="{{ URL::to('admin/photos/' . $photo->id . '/edit/') }}"><img src="{{ $photo->img_link }}" /></a></td>
             <td>
               {{ Form::open(array('url' => 'admin/photos/' . $photo->id, 'class' => 'pull-right')) }}
                    {{ Form::hidden('_method', 'DELETE') }}

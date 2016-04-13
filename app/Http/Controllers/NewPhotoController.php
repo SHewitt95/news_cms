@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -47,28 +48,34 @@ class NewPhotoController extends Controller
     */
    public function store(Request $request)
    {
-     // store
-     dd($request->files);
-     if (Request::hasFile('image'))
-      {
 
-        if (Request::file('image')->isValid())
-          {
-            $photo = new Photo;
-            $photo->author_id = $request->author_id;
-            $photo->package_id = $request->package_id;
-            $photo->caption = $request->caption;
+        $photo = new Photo;
+        $photo->author_id = $request->author_id;
+        $photo->package_id = $request->package_id;
+        $photo->caption = $request->caption;
 
-            $file = $request->files;
+        //$file = $request->files;
+        //$myFile = $request->file("image")->getRealPath();
 
+        $photo->save();
 
-            $photo->save();
-          } else {
-            // Image is invalid
-          }
-      } else {
-        // Image not uploaded
-      }
+        $imageName = $photo->id . '.' .
+          $request->file('image')->getClientOriginalExtension();
+
+        //  dd($imageName);
+
+        $imgPath = base_path() . '/storage/app/public/'. $imageName;
+
+        $photo->img_link = $imgPath;
+
+        $photo->save();
+
+        //dd($imgPath);
+
+        $request->file('image')->move(
+          base_path() . '/storage/app/public/', $imageName
+        );
+
 
      $photos = Photo::all();
      return view('frontend.photos.index', ["photos" => $photos]);
@@ -128,11 +135,11 @@ class NewPhotoController extends Controller
    public function destroy($id)
    {
      // delete
-      $post = Post::find($id);
-      $post->delete();
+      $photo = Photo::find($id);
+      $photo->delete();
 
       // redirect
-      $posts = Post::all();
-      return view('frontend.posts.index', ["posts" => $posts]);
+      $photos = Photo::all();
+      return view('frontend.photos.index', ["photos" => $photos]);
    }
 }
