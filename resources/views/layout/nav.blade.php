@@ -12,11 +12,11 @@
      </div>
      <div id="navbar" class="collapse navbar-collapse">
        <ul class="nav navbar-nav">
-         <li><a href="admin/posts">Posts</a></li>
-         <li><a href="admin/authors">Authors</a></li>
-         <li><a href="admin/departments">Departments</a></li>
-         <li><a href="admin/photos">Photos</a></li>
-         <li><a href="admin/packages">Packages</a></li>
+         <li><a href="http://159.203.74.152/admin/posts">Posts</a></li>
+         <li><a href="http://159.203.74.152/admin/authors">Authors</a></li>
+         <li><a href="http://159.203.74.152/admin/departments">Departments</a></li>
+         <li><a href="http://159.203.74.152/admin/photos">Photos</a></li>
+         <li><a href="http://159.203.74.152/admin/packages">Packages</a></li>
        </ul>
      </div><!--/.nav-collapse -->
    </div>
