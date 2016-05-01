@@ -52,7 +52,7 @@
                     <li>News</li>
                     <li>More News</li>
                     <li>All the News</li>
-                    <li><a href="admin">Login</a></li>
+                    <li><a href="/admin">Login</a></li>
                   </ul>
                 </div>
             </div>
