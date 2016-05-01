@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Auth;
 
 class MyController extends Controller
 {
@@ -13,7 +14,15 @@ class MyController extends Controller
   public function admin() {
     // $user = User::find(1);
     // $user->profile->gender;
-    return view('frontend.admin');
+
+    if (Auth::check()) {
+      // The user is logged in...
+      return view('frontend.admin');
+    }
+
+    return view('auth.login');
+
+
   }
 
   public function index() {

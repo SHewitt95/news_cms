@@ -17,11 +17,11 @@
 
 Route::get('/', 'MyController@index')->name('sayhello');
 
-Route::get('/admin', 'MyController@admin')->name('adminPage');
+//Route::get('/admin', 'MyController@admin')->name('adminPage');
 
 Route::get('json', 'NewPostController@posts_json')->name('pjson');
 
-Route::resource('admin/posts', 'NewPostController');
+/*Route::resource('admin/posts', 'NewPostController');
 
 Route::resource('admin/authors', 'NewAuthorController');
 
@@ -29,7 +29,7 @@ Route::resource('admin/departments', 'NewDeptController');
 
 Route::resource('admin/packages', 'NewPackageController');
 
-Route::resource('admin/photos', 'NewPhotoController');
+Route::resource('admin/photos', 'NewPhotoController');*/
 
 
 
@@ -81,13 +81,31 @@ Route::get('/admin/edit_package/{id}', 'PackageController@edit_package')->name('
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
+/*Route::get('backend',['middleware' => 'auth.basic', function()
+{
 
 
-});
+}]);*/
+
+/*Route::group(['middleware' => ['web']], function () {
+
+
+});*/
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
+
+    Route::get('/admin', 'MyController@admin')->name('adminPage');
+
+    Route::resource('admin/posts', 'NewPostController');
+
+    Route::resource('admin/authors', 'NewAuthorController');
+
+    Route::resource('admin/departments', 'NewDeptController');
+
+    Route::resource('admin/packages', 'NewPackageController');
+
+    Route::resource('admin/photos', 'NewPhotoController');
 
     Route::get('/home', 'HomeController@index');
 });
