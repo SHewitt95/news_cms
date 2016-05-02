@@ -1,5 +1,35 @@
-<!DOCTYPE html>
-<html>
+@extends('layout.homeLayout')
+
+@include('layout.header')
+@include('layout.homeNav')
+
+@section('content')
+<div class="photoGallery">
+
+  <ul class="bxslider">
+    @foreach ($photos as $photo)
+      <li><img src="{{$photo->img_link}}" /></li>
+    @endforeach
+  </ul>
+
+</div> <!-- End photoGallery -->
+
+<div class="postList">
+
+  <h2 class="postList-title">All Posts</h2>
+  @foreach ($posts as $post)
+  <div class="post">
+    <h3>{{ $post->headline }}</h3>
+    <h4>{{ str_limit($post->body_text, 100) }}</h4>
+  </div>
+  @endforeach
+
+</div> <!-- End postList -->
+@stop
+
+
+<!--DOCTYPE html-->
+<!--html>
     <head>
         <title>Laravel</title>
 
@@ -58,4 +88,4 @@
             </div>
         </div>
     </body>
-</html>
+</html-->

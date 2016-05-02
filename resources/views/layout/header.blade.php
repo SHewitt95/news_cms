@@ -1,6 +1,6 @@
 @section('head')
 <head>
-    <title>Laravel</title>
+    <title>All The News</title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -57,6 +57,25 @@
 
     a button {
       margin: 0;
+    }
+
+    ul.navbar-nav {
+      font-size: 2em;
+    }
+
+    .main-logo {
+      display: block;
+    }
+
+    .postList {
+      width: 50%;
+      text-align: left;
+      margin: 1em auto;
+      font-family: sans-serif;
+    }
+
+    h2.postList-title {
+      text-align: center;
     }
     </style>
 </head>

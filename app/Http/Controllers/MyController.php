@@ -8,6 +8,12 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
 
+use App\Author;
+use App\Post;
+use App\Department;
+use App\Package;
+use App\Photo;
+
 class MyController extends Controller
 {
 
@@ -26,7 +32,11 @@ class MyController extends Controller
   }
 
   public function index() {
-    return view('frontend.hello');
+
+    $photos = Photo::all();
+    $posts = Post::all();
+
+    return view('frontend.hello', ["photos" => $photos, "posts" => $posts]);
   }
 
   /*public function index2() {
