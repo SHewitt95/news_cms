@@ -94,6 +94,11 @@
       margin: 1em auto;
       font-family: sans-serif;
     }
+
+    .photo-index-img {
+      width: 100px;
+      height: 100px;
+    }
     </style>
 </head>
 @stop
