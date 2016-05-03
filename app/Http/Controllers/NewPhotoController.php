@@ -125,7 +125,10 @@ class NewPhotoController extends Controller
      $photo->save();
 
       $photos = Photo::all();
-      return view('frontend.photos.index', ["photos" => $photos]);
+      $authors = Author::lists('name', 'id');
+      $packages = Package::lists('topic', 'id');
+
+      return view('frontend.photos.index', ["photo" => $photo, "authors" => $authors, "packages" => $packages]);
    }
 
    /**
