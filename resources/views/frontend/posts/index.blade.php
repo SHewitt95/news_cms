@@ -24,10 +24,10 @@
       <tbody>
         @foreach ($posts as $post)
           <tr>
-            <td><a href="{{ URL::to('admin/posts/' . $post->id . '/edit/') }}">{{ $post->id}}</a></td>
+            <td><a href="{{ URL::to('admin/posts/' . $post->id . '/edit/') }}">{{ $post->id }}</a></td>
             <td><a href="{{ URL::to('admin/posts/' . $post->id . '/edit/') }}">{{ $post->headline }}</a></td>
-            <td><a href="{{ URL::to('admin/posts/' . $post->id . '/edit/') }}">{{ $post->author_id}}</a></td>
-            <td><a href="{{ URL::to('admin/posts/' . $post->id . '/edit/') }}">{{ $post->package_id}}</a></td>
+            <td><a href="{{ URL::to('admin/posts/' . $post->id . '/edit/') }}">{{ $authors[$post->author_id] }}</a></td>
+            <td><a href="{{ URL::to('admin/posts/' . $post->id . '/edit/') }}">{{ $packages[$post->package_id] }}</a></td>
             <td>
               {{ Form::open(array('url' => 'admin/posts/' . $post->id, 'class' => 'pull-right')) }}
                    {{ Form::hidden('_method', 'DELETE') }}

@@ -24,8 +24,9 @@ class NewPhotoController extends Controller
    public function index()
    {
      $photos = Photo::all();
-     //$authors = Author::lists('name', 'id');
-     return view('frontend.photos.index', ["photos" => $photos]);
+     $authors = Author::lists('name', 'id');
+
+     return view('frontend.photos.index', ["photos" => $photos, "authors" => $authors]);
    }
 
    /**
