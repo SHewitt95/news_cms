@@ -52,7 +52,7 @@ class NewAuthorController extends Controller
      // store
      $author = new Author;
      $author->name = $request->name;
-     dd($request->department);
+     //dd($request->department);
      $author->department = $request->department;
      $author->save();
 
