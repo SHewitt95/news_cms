@@ -21,7 +21,7 @@
   @foreach ($posts as $post)
   <div class="post">
     <a href="http://159.203.74.152/post/{{$post->id}}"><h3>{{ $post->headline }}</h3></a>
-    <a href="http://159.203.74.152/post/{{$post->id}}"><h4>{{ str_limit($post->body_text, 100) }}</h4></a>
+    <a href="http://159.203.74.152/post/{{$post->id}}"><p>{{ str_limit($post->body_text, 100) }}</p></a>
   </div>
   @endforeach
 
