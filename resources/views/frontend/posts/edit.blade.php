@@ -15,6 +15,9 @@
   {!! Form::label('author_id', 'Author:') !!}
   {{ Form::select('author_id', $authors, array('class' => 'form-control')) }}
 
+  {!! Form::label('package_id', 'Package:') !!}
+  {{ Form::select('package_id', $packages, array('class' => 'form-control')) }}
+
   {!! Form::textarea('body_text', $post->body_text) !!}
 
   {!! Form::submit('Save'); !!}

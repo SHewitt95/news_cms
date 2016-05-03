@@ -78,7 +78,7 @@ class NewPostController extends Controller
    public function show($id)
    {
        $post = Post::find($id);
-       $authors = Author::all();
+       $authors = Author::lists('name', 'id');
 
        return view('frontend.posts.show', ["post" => $post, "authors" => $authors]);
    }
