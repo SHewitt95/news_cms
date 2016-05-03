@@ -6,7 +6,7 @@
 @section('content')
 <div class="photoGallery">
 
-<!-- http://bxslider.com/ -->
+  <h2 class="photoG-title">Recent Photos</h2>
   <ul class="bxslider">
     @foreach ($photos as $photo)
       <li><img src="{{$photo->img_link}}" /></li>
@@ -17,11 +17,11 @@
 
 <div class="postList">
 
-  <h2 class="postList-title">All Posts</h2>
+  <h2 class="postList-title">Posts</h2>
   @foreach ($posts as $post)
   <div class="post">
-    <h3>{{ $post->headline }}</h3>
-    <h4>{{ str_limit($post->body_text, 100) }}</h4>
+    <a href="http://159.203.74.152/post/{{$post->id}}"><h3>{{ $post->headline }}</h3></a>
+    <a href="http://159.203.74.152/post/{{$post->id}}"><h4>{{ str_limit($post->body_text, 100) }}</h4></a>
   </div>
   @endforeach
 
@@ -36,66 +36,3 @@
   });
 </script>
 @stop
-
-
-<!--DOCTYPE html-->
-<!--html>
-    <head>
-        <title>Laravel</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                /*vertical-align: middle;*/
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-
-            .links ul {
-              list-style: none;
-            }
-
-            .links ul li {
-              font-size: 48px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">All the News</div>
-                <div class="links">
-                  <ul>
-                    <li>News</li>
-                    <li>More News</li>
-                    <li>All the News</li>
-                    <li><a href="/admin">Login</a></li>
-                  </ul>
-                </div>
-            </div>
-        </div>
-    </body>
-</html-->

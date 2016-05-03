@@ -74,7 +74,9 @@ class NewPostController extends Controller
     */
    public function show($id)
    {
-       //
+       $post = Post::find($id);
+
+       return view('frontend.posts.show', ["post" => $post]);
    }
 
    /**

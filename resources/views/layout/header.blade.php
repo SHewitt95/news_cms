@@ -77,6 +77,10 @@
       padding: 1em;
     }
 
+    .postList .post {
+      margin-bottom: 3em;
+    }
+
     h2.postList-title {
       text-align: center;
     }
@@ -84,6 +88,7 @@
     div.photoGallery {
       width: 50%;
       margin: 1em auto;
+      font-family: sans-serif;
     }
     </style>
 </head>
