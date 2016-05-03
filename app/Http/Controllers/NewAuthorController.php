@@ -101,7 +101,9 @@ class NewAuthorController extends Controller
      $author->save();
 
       $authors = Author::all();
-      return view('frontend.authors.index', ["authors" => $authors]);
+      $depts = Department::lists('name', 'id');
+
+      return view('frontend.authors.index', ["authors" => $authors, "depts" => $depts]);
    }
 
    /**
