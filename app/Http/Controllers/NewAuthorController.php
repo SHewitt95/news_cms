@@ -23,7 +23,7 @@ class NewAuthorController extends Controller
    public function index()
    {
      $authors = Author::all();
-     $depts = Department::list('name', 'id');
+     $depts = Department::lists('name', 'id');
 
      dd($depts);
 
