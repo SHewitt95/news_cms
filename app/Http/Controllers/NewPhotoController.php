@@ -128,7 +128,7 @@ class NewPhotoController extends Controller
       $authors = Author::lists('name', 'id');
       $packages = Package::lists('topic', 'id');
 
-      return view('frontend.photos.index', ["photo" => $photo, "authors" => $authors, "packages" => $packages]);
+      return view('frontend.photos.index', ["photos" => $photos, "authors" => $authors, "packages" => $packages]);
    }
 
    /**
