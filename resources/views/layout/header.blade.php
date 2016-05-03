@@ -72,6 +72,9 @@
       text-align: left;
       margin: 1em auto;
       font-family: sans-serif;
+      border: 1px solid black;
+      border-radius: 1em;
+      padding: 1em;
     }
 
     h2.postList-title {

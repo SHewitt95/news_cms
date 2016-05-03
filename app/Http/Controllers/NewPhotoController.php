@@ -100,11 +100,11 @@ class NewPhotoController extends Controller
     */
    public function edit($id)
    {
-       $post = Post::find($id);
+       $photo = Photo::find($id);
        $authors = Author::lists('name', 'id');
        $packages = Package::lists('topic', 'id');
 
-       return view('frontend.posts.edit', ["post" => $post, "authors" => $authors, "packages" => $packages]);
+       return view('frontend.photos.edit', ["photo" => $photo, "authors" => $authors, "packages" => $packages]);
    }
 
    /**
@@ -115,15 +115,14 @@ class NewPhotoController extends Controller
     */
    public function update($id, Request $request)
    {
-     $post = Post::find($id);
-     $post->headline = $request->headline;
-     $post->author_id = $request->author_id;
-     $post->package_id = $request->package_id;
-     $post->body_text = $request->body_text;
-     $post->save();
+     $photo = Photo::find($id);
+     $photo->author_id = $request->author_id;
+     $photo->package_id = $request->package_id;
+     $photo->caption = $request->caption;
+     $photo->save();
 
-      $posts = Post::all();
-      return view('frontend.posts.index', ["posts" => $posts]);
+      $photos = Photo::all();
+      return view('frontend.photos.index', ["photos" => $photos]);
    }
 
    /**
