@@ -25,7 +25,7 @@
            <tr>
              <td><a href="{{ URL::to('admin/authors/' . $author->id . '/edit/') }}">{{ $author->id}}</td>
              <td><a href="{{ URL::to('admin/authors/' . $author->id . '/edit/') }}">{{ $author->name }}</td>
-             <td><a href="{{ URL::to('admin/authors/' . $author->id . '/edit/') }}">{{ $depts[$author->department] }}</td>
+             <td><a href="{{ URL::to('admin/authors/' . $author->id . '/edit/') }}">{{ $depts[$author->department] or '0' }}</td>
              <td>
                {{ Form::open(array('url' => 'admin/authors/' . $author->id, 'class' => 'pull-right')) }}
                     {{ Form::hidden('_method', 'DELETE') }}
