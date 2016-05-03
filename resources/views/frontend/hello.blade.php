@@ -9,7 +9,7 @@
   <h2 class="photoG-title">Recent Photos</h2>
   <ul class="bxslider">
     @foreach ($photos as $photo)
-      <li><img src="{{$photo->img_link}}" /></li>
+      <li><a href="http://159.203.74.152/photo/{{$photo->id}}"><img src="{{$photo->img_link}}" /></a></li>
     @endforeach
   </ul>
 
