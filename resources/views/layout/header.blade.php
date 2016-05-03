@@ -113,6 +113,15 @@
     h2, h3, h4, h5, h6 {
     	font-size: 1.5em;
     }
+
+    .photoBox {
+      width: 50%;
+      margin: 1em auto;
+    }
+
+    .photoBox .photo img {
+      width: 100%;
+    }
     </style>
 </head>
 @stop
