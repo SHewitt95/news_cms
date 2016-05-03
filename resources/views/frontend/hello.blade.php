@@ -6,6 +6,7 @@
 @section('content')
 <div class="photoGallery">
 
+<!-- http://bxslider.com/ -->
   <ul class="bxslider">
     @foreach ($photos as $photo)
       <li><img src="{{$photo->img_link}}" /></li>
@@ -25,6 +26,9 @@
   @endforeach
 
 </div> <!-- End postList -->
+
+<!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script-->
+<script src="C:\wamp\www\news_cms\public\js\jquery.min.js"></script>
 @stop
 
 
