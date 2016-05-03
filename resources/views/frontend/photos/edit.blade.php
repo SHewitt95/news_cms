@@ -7,7 +7,7 @@
   <div class="title">Edit Photo</div>
   <div class="content">
 
-    <img src="{{$photo->img_link}}" />
+    <img width="50%" margin="1em auto" src="{{$photo->img_link}}" />
 
     {!! Form::model($photo, array('route' => array('admin.photos.update', $photo->id), 'method' => 'PUT')) !!}
 
