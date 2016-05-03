@@ -78,7 +78,7 @@
       text-align: center;
     }
 
-    ul.bxslider {
+    div.photoGallery {
       width: 50%;
       margin: 1em auto;
     }
