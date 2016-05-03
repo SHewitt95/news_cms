@@ -25,6 +25,9 @@ class NewAuthorController extends Controller
      $authors = Author::all();
      $depts = Department::list('name', 'id');
 
+     dd($depts);
+
+
      return view('frontend.authors.index', ["authors" => $authors, "depts" => $depts]);
    }
 
