@@ -37,6 +37,10 @@
         margin-bottom: 0.5em;
     }
 
+    a {
+      color: black;
+    }
+
     table {
       margin-bottom: 2em;
     }
