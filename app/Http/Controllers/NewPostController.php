@@ -114,7 +114,9 @@ class NewPostController extends Controller
      $post->save();
 
       $posts = Post::all();
-      return view('frontend.posts.index', ["posts" => $posts]);
+      $packages = Package::lists('topic', 'id');
+
+      return view('frontend.posts.index', ["posts" => $posts, "packages" => $packages]);
    }
 
    /**
