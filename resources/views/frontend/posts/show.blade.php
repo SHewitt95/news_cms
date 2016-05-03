@@ -8,7 +8,7 @@
 
   <div class="post">
     <h2>{{ $post->headline }}</h2>
-    <h3>{{ $authors[$post->author_id] }}</h3>
+    <h3>{{ $authors[$post->author_id]->name }}</h3>
     <p>{{ $post->body_text }}</p>
   </div>
 
