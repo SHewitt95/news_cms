@@ -25,8 +25,9 @@ class NewPhotoController extends Controller
    {
      $photos = Photo::all();
      $authors = Author::lists('name', 'id');
+     $packages = Package::lists('topic', 'id');
 
-     return view('frontend.photos.index', ["photos" => $photos, "authors" => $authors]);
+     return view('frontend.photos.index', ["photos" => $photos, "authors" => $authors, "packages" =>$packages]);
    }
 
    /**
