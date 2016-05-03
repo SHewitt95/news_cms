@@ -77,6 +77,11 @@
     h2.postList-title {
       text-align: center;
     }
+
+    ul.bxslider {
+      width: 50%;
+      margin: 1em auto;
+    }
     </style>
 </head>
 @stop
