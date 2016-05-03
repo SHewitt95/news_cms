@@ -28,7 +28,7 @@
 </div> <!-- End postList -->
 
 <!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script-->
-<script src="C:\wamp\www\news_cms\public\js\jquery.min.js"></script>
+<script src="http://159.203.74.152/js/jquery.min.js"></script>
 @stop
 
 
