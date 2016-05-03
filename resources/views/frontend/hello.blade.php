@@ -29,6 +29,12 @@
 
 <!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script-->
 <script src="http://159.203.74.152/js/jquery.min.js"></script>
+<script src="http://159.203.74.152/js/jquery.bxslider.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $('.bxslider').bxSlider();
+  });
+</script>
 @stop
 
 
