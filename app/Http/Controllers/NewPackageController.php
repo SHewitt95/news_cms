@@ -64,7 +64,25 @@ class NewPackageController extends Controller
     */
    public function show($id)
    {
-       //
+     $package = Package::find($id);
+
+     $headlines = Post::lists('headline', 'package_id');
+     $body = Post::lists('body_text', 'package_id');
+     $authors = Author::lists('name', 'id');
+     $photographers = Post::lists('author_id', 'package_id');
+     $writtenAuthor = Post::lists('package_id', 'author_id');
+
+     $photos = Photo::lists('img_link', 'package_id');
+     $photoCaptions = Photo::lists('caption', 'package_id');
+
+     return view('frontend.packages.show', ["package" => $package,
+                                           "headlines" => $headlines,
+                                           "body" => $body,
+                                           "authors" => $authors,
+                                           "photographers" => $photographers,
+                                           "writtenAuthor" => $writtenAuthor,
+                                           "photos" => $photos,
+                                           "photoCaptions" => $photoCaptions]);
    }
 
    /**

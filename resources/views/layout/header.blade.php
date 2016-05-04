@@ -119,6 +119,10 @@
       margin: 1em auto;
     }
 
+    .photoBox .photo {
+      margin-bottom: 1em;
+    }
+
     .photoBox .photo img {
       width: 100%;
     }
