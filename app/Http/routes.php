@@ -21,7 +21,7 @@ Route::get('/package/{id}', 'NewPackageController@show')->name('showPackage');
 
 Route::get('/posts', 'NewPostController@showAll')->name('showPosts');
 
-Route::get('/photos', 'NewPhotoController@show')->name('showPhotos');
+Route::get('/photos', 'NewPhotoController@showAll')->name('showPhotos');
 
 Route::get('/packages', 'NewPackageController@show')->name('showPackages');
 

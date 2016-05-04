@@ -100,6 +100,14 @@ class NewPhotoController extends Controller
      return view('frontend.photos.show', ["photo" => $photo, "authors" => $authors]);
    }
 
+   public function showAll()
+   {
+     $photos = Photo::all();
+     //$authors = Author::lists('name', 'id');
+
+     return view('frontend.photos.all', ["photos" => $photos]);
+   }
+
    /**
     * Show the form for editing the specified resource.
     *
