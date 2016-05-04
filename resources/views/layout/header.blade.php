@@ -110,6 +110,10 @@
     	font-family: "Arvo", sans-serif;
     }
 
+    .top h1 {
+      font-size: 4.5em;
+    }
+
     h2, h3, h4, h5, h6 {
     	font-size: 1.5em;
     }
