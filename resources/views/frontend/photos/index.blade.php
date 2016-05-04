@@ -25,7 +25,7 @@
         @foreach ($photos as $photo)
           <tr>
             <td><a href="{{ URL::to('admin/photos/' . $photo->id . '/edit/') }}"><img class="photo-index-img" src="{{ $photo->img_link }}" /></a></td>
-            <td><a href="{{ URL::to('admin/photos/' . $photo->id . '/edit/') }}">{{ $authors[$photo->author_id] }}</a></td>
+            <td><a href="{{ URL::to('admin/photos/' . $photo->id . '/edit/') }}">{{ $authors[$photo->author_id] or 'None' }}</a></td>
             <td><a href="{{ URL::to('admin/photos/' . $photo->id . '/edit/') }}">{{ $photo->caption }}</a></td>
             <td><a href="{{ URL::to('admin/photos/' . $photo->id . '/edit/') }}">{{ $packages[$photo->package_id] or 'None' }}</a></td>
             <td>
