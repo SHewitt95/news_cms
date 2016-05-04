@@ -83,6 +83,14 @@ class NewPostController extends Controller
        return view('frontend.posts.show', ["post" => $post, "authors" => $authors]);
    }
 
+   public function showAll()
+   {
+     $posts = Post::all();
+     $authors = Author::lists('name', 'id');
+
+     return view('frontend.posts.all', ["posts" => $posts, "authors" => $authors]);
+   }
+
    /**
     * Show the form for editing the specified resource.
     *

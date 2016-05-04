@@ -19,6 +19,12 @@ Route::get('/photo/{id}', 'NewPhotoController@show')->name('showPhoto');
 
 Route::get('/package/{id}', 'NewPackageController@show')->name('showPackage');
 
+Route::get('/posts', 'NewPostController@showAll')->name('showPosts');
+
+Route::get('/photos', 'NewPhotoController@show')->name('showPhotos');
+
+Route::get('/packages', 'NewPackageController@show')->name('showPackages');
+
 Route::get('json', 'NewPostController@posts_json')->name('pjson');
 
 /*
