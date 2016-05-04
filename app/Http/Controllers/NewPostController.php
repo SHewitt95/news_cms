@@ -66,7 +66,10 @@ class NewPostController extends Controller
      $post->save();
 
      $posts = Post::all();
-     return view('frontend.posts.index', ["posts" => $posts]);
+     $authors = Author::lists('name', 'id');
+     $packages = Package::lists('topic', 'id');
+
+     return view('frontend.posts.index', ["posts" => $posts, "authors" => $authors, "packages" => $packages]);
    }
 
    /**
