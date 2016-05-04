@@ -15,7 +15,7 @@
          <li><a href="http://159.203.74.152/">Home</a></li>
          <li><a href="http://159.203.74.152/posts">Posts</a></li>
          <li><a href="http://159.203.74.152/photos">Photos</a></li>
-         <li><a href="http://159.203.74.152/packages">Packages</a></li>
+         <!--li><a href="http://159.203.74.152/packages">Packages</a></li-->
        </ul>
      </div><!--/.nav-collapse -->
    </div>
