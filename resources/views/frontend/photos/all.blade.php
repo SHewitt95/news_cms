@@ -8,7 +8,7 @@
 
   @foreach ($photos as $photo)
     <div class="photo">
-      <img src="{{ $photo->img_link }}" />
+      <a href="http://159.203.74.152/photo/{{$photo->id}}"><img src="{{ $photo->img_link }}" /></a>
     </div>
   @endforeach
 
